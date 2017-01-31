@@ -1,3 +1,5 @@
+* Introduction
+This is a basic python guide. It is intended for those who want to start using python with just the relevant amount of information/tools. It is a collection of tools and packages I find useful. Feel free to fork or submit a pull request.
 
 * Installation
 We'll use [[http://brew.sh/][Homebrew]] system to install python. Homebrew is one of the most important pieces of software available for the mac; it allows you to install software effortlessly, upgrade it, manage dependencies automatically and you always have the latest versions, before binaries are officially out.
@@ -56,7 +58,7 @@ It is worthwhile to learn the keyboard shortcuts of jupyter which improves your 
 
 Jupyter is built on top of =ipython=, so one can use [[http://ipython.readthedocs.io/en/stable/interactive/magics.html][magic]] (this is an advanced topic).
 
-Jupyter for me is a tool to experiment or prototype; once I have a notebook I often convert it to a regular python script using =jupyter-nbconvert= which then runs faster using 
+Jupyter for me is a tool to do experiments or prototyping; once I have a working notebook I will often convert it to a regular python script which then runs faster. Conversion is done by 
 #+BEGIN_EXAMPLE
 jupyter-nbconvert my_scripyt.ipynb --to python
 #+END_EXAMPLE
@@ -64,4 +66,3 @@ and then run it using
 #+BEGIN_EXAMPLE
 python my_script.py [arguments]
 #+END_EXAMPLE
-
