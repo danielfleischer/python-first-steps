@@ -1,0 +1,67 @@
+
+* Installation
+We'll use [[http://brew.sh/][Homebrew]] system to install python. Homebrew is one of the most important pieces of software available for the mac; it allows you to install software effortlessly, upgrade it, manage dependencies automatically and you always have the latest versions, before binaries are officially out.
+
+Install it by following the instruction on [[http://brew.sh/][brew.sh]]. Then, install python using homebrew:
+#+BEGIN_EXAMPLE
+brew install python
+#+END_EXAMPLE
+
+It will install python version 2.7.x. I recommend starting with version 2.7 as opposed to python 3.5 since:
+1. python 2.7 is more forgiving in terms of errors (exceptions).
+2. Not all python packages are ported to version 3.5+ yet.
+3. The syntax differences are minor.
+
+The only downside is python 2.7 is scheduled to be retired in a few years so if you set off to start a huge project, then it is wise to go with version 3.5. 
+
+
+Python comes with its own package manager called =pip=. Upgrade it:
+#+BEGIN_EXAMPLE
+pip install --upgrade pip setuptools
+#+END_EXAMPLE
+
+
+* Packages
+There are several packages I'll mention, to be installed using =pip=:
+#+BEGIN_EXAMPLE
+pip install PACKAGE_NAME_1 ... PACKAGE_NAME_N
+#+END_EXAMPLE
+
+- scipy :: This is the main scientific library for python. It contains basic and special functions, integration, optimization, linear algebra and statistics among other packages. [[https://docs.scipy.org/doc/scipy/reference/][Reference]].
+- numpy :: This is part of the scipy project; this library implements n-dimensional arrays and relevant functions [[https://docs.scipy.org/doc/numpy/reference/index.html][NumPy Reference — NumPy v1.12 Manual]].
+- matplotlib :: This is a plotting library; it is the standard one even though it is not the best or easiest to work with. [[http://matplotlib.org/][Matplotlib]]. 
+- jupyter :: For me that is the most important part of the productivity; it enables you to have python notebooks which combine code, text, latex and run on your browser. It builds on the capability of ipython but now it is a much bigger project, supporting multiple languages.
+
+Installing them using =pip= will install all relevant packages they require. 
+
+** Extra packages
+Depending on your interests, here are some packages worth knowing:
+- pandas :: This is used to work with data structures and doing data analysis. It was developed for financial stock databases but is being used everywhere; built on top of numpy arrays. Very powerful for large databases. 
+- sklearn :: This is a wonderful machine learning package for python; there are many tools and tutorials; using it is a good introduction to the data science world. [[http://scikit-learn.org/stable/][Scikit-learn]].
+- seaborn, ggplot, bokeh :: These are plotting libraries worth trying.
+
+
+* Jupyter
+Once you have everything installed, open a terminal and write =jupyter=. A browser will open and show you the folder structure of your current location. Create a new notebook using the button =new=. A new notebook will be created. 
+
+A Jupyter notebook is made up of cells. Try writing
+#+BEGIN_EXAMPLE
+print "Hello World!"
+#+END_EXAMPLE
+and then evaluate the cell by pressing =shift+enter= and you will see the result below the code cell. 
+
+Insert new cells using the plus button. A cell can contain text; change the cell type using the toolbar or the menu - from code to [[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet][markdown]] which accepts also latex snippets in $$...$$ blocks. Evaluate the text again using =shift+enter=. 
+
+It is worthwhile to learn the keyboard shortcuts of jupyter which improves your productivity.
+
+Jupyter is built on top of =ipython=, so one can use [[http://ipython.readthedocs.io/en/stable/interactive/magics.html][magic]] (this is an advanced topic).
+
+Jupyter for me is a tool to experiment or prototype; once I have a notebook I often convert it to a regular python script using =jupyter-nbconvert= which then runs faster using 
+#+BEGIN_EXAMPLE
+jupyter-nbconvert my_scripyt.ipynb --to python
+#+END_EXAMPLE
+and then run it using
+#+BEGIN_EXAMPLE
+python my_script.py [arguments]
+#+END_EXAMPLE
+
