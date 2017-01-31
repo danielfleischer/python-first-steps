@@ -1,6 +1,7 @@
 * Introduction
 This is a basic python guide. It is intended for those who want to start using python with just the relevant amount of information/tools. It is a collection of tools and packages I find useful. Feel free to fork or submit a pull request.
 
+
 * Installation
 We'll use [[http://brew.sh/][Homebrew]] system to install python. Homebrew is one of the most important pieces of software available for the mac; it allows you to install software effortlessly, upgrade it, manage dependencies automatically and you always have the latest versions, before binaries are officially out.
 
@@ -66,3 +67,8 @@ and then run it using
 #+BEGIN_EXAMPLE
 python my_script.py [arguments]
 #+END_EXAMPLE
+
+* Example
+There is a python notebook called =Pandas-Example.ipynb=. Once everything is set up, feel free to go over it; Github can show the notebook but in order to play with it you need to download it and the additional dataset.
+
+The dataset is the famous [[https://en.wikipedia.org/wiki/Iris_flower_data_set][Iris flower data set]]. The notebook is very simple, using pandas to import the =csv= file, clean =NaN= values and plot a histogram. There is much more in pandas. 
